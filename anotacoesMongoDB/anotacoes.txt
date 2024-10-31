@@ -1,0 +1,55 @@
+mongodb é flexivel e não relacional.
+
+>Uma de suas principais vantagens é sua rapidez no processamento de dados não estruturados com grandes volumes
+>Armazenamento eficiente de conteudo multimidia
+>Armazenamento e analise de dados gerados por dispositivos IoT
+>Gerenciamento eficiente de dados de perfis de usuários e jogadas
+
+Diferenças na estrutura de um banco relacional e um não relacional
+Relacional			Não relacional
+>Tabela				>Coleção
+>Linha				>Documento(objetos)
+>Coluna				>Campo e sub campo
+
+Principais tipos de dados
+>string: "texto entre aspas"
+>number: 12, 3.14, -10 (numeros)
+>array: [1,2,3]; ["Laranja", "Banana", "Maçã"]; ["segunda", 13, true]; (dados diversos dentro de colchetes)
+>Objeto: {"Nome:" "João", "idade: "30} (são informações diversas dentro de chaves)
+
+Principais elementos do MongoDB
+>Collections: são como as tabelas nos bancos relacionais, nelas vamos inserir os dados;
+Collections são criadas em tempo real
+Collections podem ser criadas livremente a qualquer momento e não possuem colunas fixas para os dados;​
+>Database: é onde ficam as nossas collections e dados;​
+>Documents: são os campos que armazenam os dados;​
+
+Comandos
+>show dbs (mostra todos os banco de dados armazenados).​
+>use db_minicurso (cria e ativa um banco de dados)​
+>db (utiliza o banco de dados ativo)​
+
+Criando a collection coll_professores já inserindo os dados​
+>db.coll_professores.insertOne( ); (inseri um único registro)​
+>db.coll_professores.insertMany( ); (inseri vários registros)​
+>show collections; (mostra todas as collections)​
+>db.collection.drop( ); (dropa uma collection)
+=====================================================
+Criando a base de dados
+utiliza-se o comando use:
+> use db_nomeBaseDeDados
+
+Criando uma collection
+utiliza-se o comando db. seguido do nome desejado da collection seguido de um '.'(ponto),
+insertOne, e as informações entre parenteses e chaves,
+separadas por virgula e classificadas de acordo com seu tipo:
+>db.coll_NomeCollection.insertOne({
+	nome: "José", 
+	sexo: "M",
+	idade: 57,
+	salario: 10000.00,
+	conjugue: "Patricia",
+	filhos: 2
+});
+--Para inserir varias informaçoes em uma collection
+
